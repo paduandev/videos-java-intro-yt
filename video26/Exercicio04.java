@@ -24,7 +24,7 @@ public class Exercicio04 {
 
         for (char c : caracteres) {
             if(c != ' ') {
-                countTotalLetras++;
+                countTotalLetras++; // desconsidera os espaços em branco
                 if(c == letra) {
                     countLetras++;
                 }
@@ -32,6 +32,8 @@ public class Exercicio04 {
         }
         double percentual = ((double) countLetras / countTotalLetras) * 100;
 
+        // conforme o enunciado, exibe com 2 casas decimais
+        // o %% é para exibir um % na tela (caracter de escape)
         System.out.printf("Percentual: %.2f %%", percentual);
     }
 }
